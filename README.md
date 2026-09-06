@@ -4,11 +4,9 @@ Download the current list here:
 
 [`players.json`](https://raw.githubusercontent.com/WinterValor/elim_players_2026/main/players.json)
 
-The file starts from the completed 730-day active-player scan. It contains
-players whose FFScouter `bs_estimate` was above 1 billion and who still returned
-`Unknown` for the Elimination team at the most recent scan. It is refreshed by an
-automated scanner in the private [`elim_scanner`](https://github.com/WinterValor/elim_scanner)
-repository. A player disappears from this file as soon as Torn reports a team.
+The file contains the complete 1b+ player list from the 730-day active-player
+scan, including players with a known Elimination team and players who still
+return `Unknown`. The private scanner checks only `Unknown` rows and updates
+their `team` value in place, so known-team rows remain available in this file.
 
 Fields are `name`, `id`, `team`, `bs estimate`, and `bs estimate human`.
-
